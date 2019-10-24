@@ -14,8 +14,8 @@ import (
 )
 
 var (
-	canonical = regexp.MustCompile(`%{(\w+(?::\w+(?::\w+)?)?)}`)
-	normal    = regexp.MustCompile(`%{([\w-.]+(?::[\w-.]+(?::[\w-.]+)?)?)}`)
+	canonical = regexp.MustCompile(`%{([\w-.\[\]@]+(?::[\w-.\[\]@]+(?::[\w-.\[\]@]+)?)?)}`)
+	normal    = regexp.MustCompile(`%{([\w-.\[\]@]+(?::[\w-.\[\]@]+(?::[\w-.\[\]@]+)?)?)}`)
 	symbolic  = regexp.MustCompile(`\W`)
 )
 
